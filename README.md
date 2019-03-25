@@ -5,4 +5,4 @@
 
 
 
-  [1]: https://github.com/ZhangJun1015/typecho-theme-scrat/blob/master/screenshot0.png
+  [1]: https://github.com/ZhangJun1015/typecho-theme-scrat/blob/master/ScreenShot0%20.png
