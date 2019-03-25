@@ -8,13 +8,13 @@
 >网站：http://www.sirit.com.cn/
 >GitHub：https://github.com/ZhangJun1015/typecho-theme-scrat
 
-#【主题设置说明】
+【主题设置说明】
 
 version 0.7 : 
 >目前只需要设置站点 LOGO 地址（必填）
 > ![设置外观][2]
 
-#【改动说明】
+【改动说明】
 
 version 0.7 
 1.  两栏设计，左栏固定（ width:300px; position:fixed; ）
@@ -28,7 +28,7 @@ version 0.7
 >
 >
 
-#【下一步计划】
+【下一步计划】
 >页面自适应
 >
 
