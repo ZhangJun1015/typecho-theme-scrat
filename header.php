@@ -50,15 +50,17 @@
 </div>
 
 <div id="sixlogos">
-<a  href="/index.php/guidang.html" ><img class="siximgs" src="http://www.sirit.com.cn/6achive.png" title="归档"/></a>
+<a  href="http://www.sirit.com.cn/001/index.php/guidang.html" ><img class="siximgs" src="http://www.sirit.com.cn/6achive.png" title="归档"/></a>
 <a  href="/index.php" ><img class="siximgs" src="http://www.sirit.com.cn/6guestbook.png" title="留言"/></a>
 <a  href="/index.php" ><img class="siximgs" src="http://www.sirit.com.cn/6links.png" title="友链"/></a>
-<a  href="/index.php/start-page.html" ><img class="siximgs" src="http://www.sirit.com.cn/6about.png" title="关于"/></a>
-<a target="_blank" href="https://github.com/ZhangJun1015" ><img class="siximgs" src="http://www.sirit.com.cn/6github.png" title="Github"/></a>
+<a  href="http://www.sirit.com.cn/001/index.php/start-page.html" ><img class="siximgs" src="http://www.sirit.com.cn/6about.png" title="关于"/></a>
+<a target="_blank" href="https://github.com/ZhangJun1015/typecho-theme-scrat" ><img class="siximgs" src="http://www.sirit.com.cn/6github.png" title="Github"/></a>
 <a target="_blank" href="<?php $this->options->feedUrl(); ?>" ><img class="siximgs" src="http://www.sirit.com.cn/6rss.png" title="RSS"/></a>
 </div>
 
-<div id="footer">&copy;<?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a> | <a href="http://www.miitbeian.gov.cn" target="_blank" > 粤ICP备18101800号</a>  Powered by <?php _e('<a href="http://www.typecho.org">Typecho</a> & <a href="/">Scrat</a>'); ?></div>
+<div id="footer">&copy;<?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a><?php if ($this->options->ICPbeian): ?> | 
+<a href="http://www.miitbeian.gov.cn" class="icpnum" target="_blank" rel="nofollow"><?php $this->options->ICPbeian(); ?></a>
+<?php endif; ?>  Powered by <?php _e('<a href="http://www.typecho.org">Typecho</a> & <a href="http://www.sirit.com.cn/index.php/archives/402/">Scrat</a>'); ?></div>
             
         </div><!-- end .row -->
     </div>
