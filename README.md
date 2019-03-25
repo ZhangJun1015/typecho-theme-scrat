@@ -1,2 +1,8 @@
 # typecho-theme-scrat
->https://github.com/ZhangJun1015/typecho-theme-scrat/blob/master/screenshot.png
+
+
+![typecho-theme-scrat][1]
+
+
+
+  [1]: https://github.com/ZhangJun1015/typecho-theme-scrat/blob/master/screenshot0.png
