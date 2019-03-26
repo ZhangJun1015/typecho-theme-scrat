@@ -57,6 +57,47 @@ function themeFields($layout) {
 	
 }
 
+
+function Links($sorts = NULL, $icon = 0) {
+	$db = Typecho_Db::get();
+	$link = NULL;
+	$list = NULL;
+	$page_links = FindContents('links.php', 'order', 'a');
+	if ($page_links) {
+		$exist = $db->fetchRow($db->select()->from('table.fields')
+			->where('cid = ? AND name = ?', $page_links[0]['cid'], 'links'));
+		if (empty($exist)) {
+			$db->query($db->insert('table.fields')
+				->rows(array(
+					'cid'           =>  $page_links[0]['cid'],
+					'name'          =>  'links',
+					'type'          =>  'str',
+					'str_value'     =>  NULL,
+					'int_value'     =>  0,
+					'float_value'   =>  0
+				)));
+			return NULL;
+		}
+		$list = $exist['str_value'];
+	}
+	if ($list) {
+		$list = explode("\r\n", $list);
+		foreach ($list as $val) {
+			list($name, $url, $description, $logo, $sort) = explode(',', $val);
+			if ($sorts) {
+				$arr = explode(',', $sorts);
+				if ($sort && in_array($sort, $arr)) {
+					$link .= '<li><a'.($url ? ' href="'.$url.'"' : '').($icon==1&&$url ? ' class="l_logo"' : '').' title="'.$description.'" target="_blank">'.($icon==1&&$url ? '<img src="'.($logo ? $logo : rtrim($url, '/').'/favicon.ico').'" onerror="erroricon(this)">' : '').'<span>'.($url ? $name : '<del>'.$name.'</del>').'</span></a></li>'."\n";
+				}
+			} else {
+				$link .= '<li><a'.($url ? ' href="'.$url.'"' : '').($icon==1&&$url ? ' class="l_logo"' : '').' title="'.$description.'" target="_blank">'.($icon==1&&$url ? '<img src="'.($logo ? $logo : rtrim($url, '/').'/favicon.ico').'" onerror="erroricon(this)">' : '').'<span>'.($url ? $name : '<del>'.$name.'</del>').'</span></a></li>'."\n";
+			}
+		}
+	}
+	echo $link ? $link : '<li>暂无链接</li>'."\n";
+}
+
+
 /*
 function themeFields($layout) {
     $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
