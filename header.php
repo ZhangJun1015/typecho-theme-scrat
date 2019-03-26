@@ -50,9 +50,9 @@
 </div>
 
 <div id="sixlogos">
-<a  href="http://www.sirit.com.cn/001/index.php/guidang.html" ><img class="siximgs" src="http://www.sirit.com.cn/6achive.png" title="归档"/></a>
-<a  href="/index.php" ><img class="siximgs" src="http://www.sirit.com.cn/6guestbook.png" title="留言"/></a>
-<a  href="/index.php" ><img class="siximgs" src="http://www.sirit.com.cn/6links.png" title="友链"/></a>
+<a  href="http://www.sirit.com.cn/001/index.php/achives.html" ><img class="siximgs" src="http://www.sirit.com.cn/6achive.png" title="归档"/></a>
+<a  href="http://www.sirit.com.cn/001/index.php/liuyan.html" ><img class="siximgs" src="http://www.sirit.com.cn/6guestbook.png" title="留言"/></a>
+<a  href="http://www.sirit.com.cn/001/index.php/links.html" ><img class="siximgs" src="http://www.sirit.com.cn/6links.png" title="友链"/></a>
 <a  href="http://www.sirit.com.cn/001/index.php/start-page.html" ><img class="siximgs" src="http://www.sirit.com.cn/6about.png" title="关于"/></a>
 <a target="_blank" href="https://github.com/ZhangJun1015/typecho-theme-scrat" ><img class="siximgs" src="http://www.sirit.com.cn/6github.png" title="Github"/></a>
 <a target="_blank" href="<?php $this->options->feedUrl(); ?>" ><img class="siximgs" src="http://www.sirit.com.cn/6rss.png" title="RSS"/></a>
