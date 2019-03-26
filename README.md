@@ -12,11 +12,16 @@
 
 >在线演示网站：http://www.sirit.com.cn/001/
 
-#更新内容参见：http://www.sirit.com.cn/index.php/archives/402/
+## 更新内容参见：http://www.sirit.com.cn/index.php/archives/402/
 
 >![typecho-theme-scrat-achives][2]
+
+
+>![typecho-theme-scrat-links][3]
 
 
   [1]: https://github.com/ZhangJun1015/typecho-theme-scrat/blob/master/ScreenShot0%20.png
 
   [2]: https://raw.githubusercontent.com/ZhangJun1015/typecho-theme-scrat/master/Screen%20Shot%202019-03-26%20at%2021.40.13.png
+  
+  [3]: https://github.com/ZhangJun1015/typecho-theme-scrat/blob/master/linksdemo.png
