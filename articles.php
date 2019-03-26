@@ -1,10 +1,18 @@
-<?php $this->need('header.php'); ?>
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+<?php
 /**
- * 归档页面
+ * 归档
  *
  * @package custom
  */
+?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php $this->need('header.php'); ?>
+
+<div class="breadcrumbs">
+<a href="<?php $this->options->siteUrl(); ?>">首页</a> &raquo; <?php $this->title() ?>
+</div>
+
+<?php
     $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000')->to($archives);   
     $year=0; $mon=0; $i=0; $j=0;   
     $output = '<div id="archives">';   
