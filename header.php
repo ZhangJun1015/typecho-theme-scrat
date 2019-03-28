@@ -4,8 +4,11 @@
 <head>
     <meta charset="<?php $this->options->charset(); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-transform" /> 
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes,maximum-scale=1">
+
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -17,7 +20,8 @@
     <link rel="stylesheet" href="//cdnjscn.b0.upaiyun.com/libs/normalize/2.1.3/normalize.min.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
-
+    
+    <script src="<?php $this->options->themeUrl('jquery.min.js'); ?>"></script>
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
     <script src="//cdnjscn.b0.upaiyun.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -35,10 +39,34 @@
     <div class="container">
         <div class="row">
 
-<div id="logoimg" ><a href="<?php $this->options->siteUrl(); ?>"><img src="<?php $this->options->logoUrl() ?>" title="<?php $this->options->title() ?>" alt="<?php $this->options->title() ?>" /></a></div>          
+<script>
+window.onload = function()
+{
+  var current = 0;
+  var div = document.getElementById('sirit');
+  document.getElementById('log0img').onclick = function()
+  {
+       current = (current+180)%360;
+       this.style.transform = 'rotate('+current+'deg)';
+       if(div.style.display=="block")
+       {
+          div.style.display="none";
+       }
+       else
+       {
+          div.style.display="block";
+       }        
+   }
+};
+</script>
 
+<div id="logoimg" ><a href="<?php $this->options->siteUrl(); ?>"><img src="<?php $this->options->logoUrl() ?>" title="<?php $this->options->title() ?>" alt="<?php $this->options->title() ?>" /></a></div>      
+    
 <div class="sitedesc"><?php $this->options->description() ?></div>
 
+<div class="sitelogo"><img id="log0img" src="<?php $this->options->logoUrl() ?>" /></div>
+<div id="sirit">
+<div id="smalltitle" ><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></div>
 <div id="fenlei"><?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?></div>
 
 <div class="site-search col-3 kit-hidden-tb">
@@ -57,7 +85,7 @@
 <a target="_blank" href="https://github.com/ZhangJun1015/typecho-theme-scrat" ><img class="siximgs" src="http://www.sirit.com.cn/6github.png" title="Github"/></a>
 <a target="_blank" href="<?php $this->options->feedUrl(); ?>" ><img class="siximgs" src="http://www.sirit.com.cn/6rss.png" title="RSS"/></a>
 </div>
-
+</div>
 <div id="footer">&copy;<?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a><?php if ($this->options->ICPbeian): ?> | 
 <a href="http://www.miitbeian.gov.cn" class="icpnum" target="_blank" rel="nofollow"><?php $this->options->ICPbeian(); ?></a>
 <?php endif; ?>  Powered by <?php _e('<a href="http://www.typecho.org">Typecho</a> & <a href="http://www.sirit.com.cn/index.php/archives/402/">Scrat</a>'); ?></div>
@@ -65,7 +93,7 @@
         </div><!-- end .row -->
     </div>
 </header><!-- end #header -->
-<div id="body">
+<div id="mainbody">
     <div class="maincontainer">
         <div class="row">
 
