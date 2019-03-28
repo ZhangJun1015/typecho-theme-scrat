@@ -2,7 +2,7 @@
 
         </div><!-- end .row -->
     </div>
-</div><!-- end #body -->
+</div><!-- end #mainbody -->
 
 </body>
 </html>
